@@ -22,7 +22,6 @@ public class mediatheque {
         dk=new CRUD_Kindle();
         ce=new CRUD_Emprunt();
     }
-    
     //GETTERS DE CLIENT
     public String getClientById(){
         Scanner sc=new Scanner(System.in);

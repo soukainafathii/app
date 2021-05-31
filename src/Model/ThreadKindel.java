@@ -29,13 +29,15 @@ public class ThreadKindel implements Runnable{
             ObjectOutputStream obj=new ObjectOutputStream(soc.getOutputStream());
             obj.writeObject(client);
             if(client!= null){
-            System.out.println(client.toString() + "a été connecté par le kindle "+cont.getKindleClient(client.getIdClient()).toString());
-            sortie.write(cont.getKindleClient(client.getIdClient()).toString());
+            String Kindle =cont.getKindleClient(client.getIdClient()).toString();
+            System.out.println(client.toString() + "a été connecté par le "+Kindle);
+            sortie.write(Kindle);
+            sortie.flush();
             }else{
                 System.out.print("client echoué de ce connecté");
             }
             }catch (IOException ex) {
-                System.out.print("Client deconnecté ");
+                System.out.print("\nClient deconnecté ");
             }
         }
      } 
