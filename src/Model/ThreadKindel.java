@@ -13,8 +13,6 @@ public class ThreadKindel implements Runnable{
     ThreadKindel(Socket soc) {
         this.soc=soc;
     }
-    long start = System.currentTimeMillis();
-    long end = start + 30*1000;
     @Override
     public void run() {
         try { 
