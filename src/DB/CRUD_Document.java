@@ -79,7 +79,7 @@ public class CRUD_Document {
             Connection con;
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mediatheque","root","");
             Statement stmt = con.createStatement();
-            ResultSet rs = stmt.executeQuery("select idDocument,ISBN,titre,url,anneeEdition,editeur from Document where ISBN =" + "'" + Editeur + "'");
+            ResultSet rs = stmt.executeQuery("select idDocument,ISBN,titre,url,anneeEdition,editeur from Document where editeur =" + "'" + Editeur + "'");
             rs.next();
             int Docid=rs.getInt("idDocument");
             String ISBn=rs.getString("ISBN");
@@ -106,7 +106,7 @@ public class CRUD_Document {
             Connection con;
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mediatheque","root","");
             Statement stmt = con.createStatement();
-            ResultSet rs = stmt.executeQuery("select idDocument,ISBN,titre,url,anneeEdition,editeur from Document where ISBN =" + "'" + AnneEdition + "'");
+            ResultSet rs = stmt.executeQuery("select idDocument,ISBN,titre,url,anneeEdition,editeur from Document where anneeEdition =" + "'" + AnneEdition + "'");
             rs.next();
             int Docid=rs.getInt("idDocument");
             String ISBn=rs.getString("ISBN");

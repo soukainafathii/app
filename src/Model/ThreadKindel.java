@@ -13,9 +13,10 @@ public class ThreadKindel implements Runnable{
     ThreadKindel(Socket soc) {
         this.soc=soc;
     }
+    long start = System.currentTimeMillis();
+    long end = start + 30*1000;
     @Override
     public void run() {
-        mediatheque med;
         try { 
             OutputStream flux1;
             flux1 = soc.getOutputStream();
@@ -39,6 +40,7 @@ public class ThreadKindel implements Runnable{
             }catch (IOException ex) {
                 System.out.print("\nClient deconnecté ");
             }
+            
         }
      } 
     

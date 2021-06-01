@@ -479,13 +479,8 @@ public class mediatheque {
             med.menuPrincipale();
       }
     }
-    
     //////////////MAIN////////////////////
     public static void main(String []args) throws SQLException, ParseException {
-        //afficher le menu au gerant
-        //1)Gestion des clients
-        //2)Gestion des kindles
-        //3)Gestion des documents
        mediatheque med=new mediatheque();
        med.menuPrincipale();
         }    
