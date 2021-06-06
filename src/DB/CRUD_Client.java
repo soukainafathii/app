@@ -5,6 +5,13 @@
  */
 package DB;
 
+
+/* client comment */
+
+
+
+
+
 import Model.Client;
 import java.sql.*;
 import java.util.*;
